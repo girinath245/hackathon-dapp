@@ -1,5 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
-import { Navigate, BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import '@polkadot/api-augment';
 

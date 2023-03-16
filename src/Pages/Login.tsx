@@ -1,4 +1,4 @@
-import { Navigate, BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { InjectedAccountWithMeta } from '@polkadot/extension-inject/types';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
@@ -19,7 +19,7 @@ const Login = () => {
         const wsProvider = new WsProvider('wss://shiden.api.onfinality.io/public-ws');
         const api = await ApiPromise.create({ provider: wsProvider });
 
-        //console.log(api.genesisHash.toHex());
+        console.log(api.genesisHash.toHex());
         //console.log((await api.rpc.system.properties()).toHuman());
     };
 
