@@ -1,5 +1,5 @@
 ![license](https://img.shields.io/badge/License-Apache%202.0-blue?logo=apache&style=flat-square)
-# @astar.js dapp template
+# @astar.js Management DApp
 
 This template provide access to Astar's modules by using [astar.js](https://github.com/AstarNetwork/astar.js)
 
