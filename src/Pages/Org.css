@@ -1,0 +1,28 @@
+.main-div {
+    display: flex;
+    
+}
+
+.side-panel {
+    flex: 0.3;
+    display: flex;
+    flex-direction: column;
+    
+}  
+
+.side-panel button {
+    display: block;
+    margin: 15px auto;
+    width: 85%;
+    height: 55px;
+    border-radius: 10px;
+    border: none;
+} 
+
+.side-panel button:hover {
+    cursor: pointer;
+}
+
+.content-main {
+    flex: 0.7
+}
