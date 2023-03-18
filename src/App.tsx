@@ -2,10 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import '@polkadot/api-augment';
 
-import './App.css';
 import Org from './Pages/Org';
-import Project from './Pages/Project';
 import Login from './Pages/Login';
+import AddMember from './Pages/AddMember';
+import GetMember from './Pages/GetMember';
+import Projects from './Pages/Projects';
+import Secretory from './Pages/Secretory';
+import Proposal from './Pages/Proposal';
 
 function App() {
     return (
@@ -14,7 +17,9 @@ function App() {
                 <Routes>
                     <Route path='/' element={<Login />} ></Route>
                     <Route path='/org' element={<Org />}></Route>
-                    <Route path='/project' element={<Project />}></Route>
+                    <Route path='/org/projects' element={<Projects />}></Route>
+                    <Route path='/org/secretory' element={<Secretory />}></Route>
+                    <Route path='/org/proposal' element={<Proposal />}></Route>
             </Routes>
         </Router>
         </div >

@@ -1,7 +1,12 @@
+import SidePanel from "./SidePanel";
+
 const AddMember = () => {
     return (
         <>
-        Add Member
+            <SidePanel />
+            <div>
+                ADD MEMBER
+            </div>
         </>
     );
 };

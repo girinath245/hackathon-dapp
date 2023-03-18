@@ -1,0 +1,40 @@
+.card-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 375px;
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #262626;
+    padding: 10px 10px;
+    box-shadow: 5px 4px 12px -1px rgba(60,60,60,0.75);
+-webkit-box-shadow: 5px 4px 12px -1px rgba(60,60,60,0.75);
+-moz-box-shadow: 5px 4px 12px -1px rgba(60,60,60,0.75);
+transition: 0.3s ease-in;
+z-index: 10;
+}
+
+.card-component h3 {
+    color: white;
+}
+
+.card-component > div {
+    color: #f5f5f5;
+    text-align: left;
+    margin: 7px 5px;
+}
+
+.card-component > div .card-title-name {
+    font-weight: 600;
+    float: left;
+}
+
+.card-component > div .card-title-value {
+    float: right;
+}
+
+.card-component:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+}

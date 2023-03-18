@@ -1,7 +1,9 @@
+import SidePanel from "./SidePanel";
+
 const GetMember = () => {
     return (
         <>
-        Get Member
+            <SidePanel />
         </>
     );
 };

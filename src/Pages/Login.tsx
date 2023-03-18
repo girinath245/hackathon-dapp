@@ -10,6 +10,8 @@ import '@polkadot/api-augment';
 import { ApiPromise } from '@polkadot/api';
 import { WsProvider } from '@polkadot/rpc-provider';
 
+import '../App.css';
+
 const Login = () => {
     const [accounts, setAccounts] = useState<InjectedAccountWithMeta[]>([]);
     const [selectedAcccount, setSelectedAccount] = useState<InjectedAccountWithMeta>();
@@ -37,9 +39,9 @@ const Login = () => {
 
         setAccounts(allAccounts);
 
-        if (allAccounts.length === 1) {
-            setSelectedAccount(allAccounts[0]);
-        }
+        // if (allAccounts.length === 1) {
+        //     setSelectedAccount(allAccounts[0]);
+        // }
     };
 
     const handleAccountSelection = (e: ChangeEvent<HTMLSelectElement>) => {
@@ -57,7 +59,7 @@ const Login = () => {
     <header className="App-header">
         <div className="Wall">Connect To Wallet</div>
         {accounts.length === 0 ?
-            (<button onClick={handleConnection}> Select Account </button>) : null}
+            (<button className='connect-button' onClick={handleConnection}> Select Account </button>) : null}
 
         {accounts.length > 0 && !selectedAcccount ? (<>
             <select defaultValue={""} onChange={handleAccountSelection}>
