@@ -1,0 +1,2027 @@
+{
+  "source": {
+    "hash": "0x9f57ce69f5c88231cb26888e9ecdaf63c2161f336f7031297e5bc93c22593ba9",
+    "language": "ink! 4.0.1",
+    "compiler": "rustc 1.66.1",
+    "build_info": {
+      "build_mode": "Debug",
+      "cargo_contract_version": "2.0.1",
+      "rust_toolchain": "stable-x86_64-unknown-linux-gnu",
+      "wasm_opt_settings": {
+        "keep_debug_symbols": false,
+        "optimization_passes": "Z"
+      }
+    }
+  },
+  "contract": {
+    "name": "pproposal",
+    "version": "0.1.0",
+    "authors": [
+      "adarsh"
+    ]
+  },
+  "spec": {
+    "constructors": [
+      {
+        "args": [
+          {
+            "label": "project_address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 1
+            }
+          }
+        ],
+        "docs": [],
+        "label": "new",
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink_primitives",
+            "ConstructorResult"
+          ],
+          "type": 16
+        },
+        "selector": "0x9bae9d5e"
+      }
+    ],
+    "docs": [],
+    "events": [],
+    "lang_error": {
+      "displayName": [
+        "ink",
+        "LangError"
+      ],
+      "type": 18
+    },
+    "messages": [
+      {
+        "args": [
+          {
+            "label": "title",
+            "type": {
+              "displayName": [
+                "String"
+              ],
+              "type": 4
+            }
+          },
+          {
+            "label": "proposal_type",
+            "type": {
+              "displayName": [
+                "ProposalType"
+              ],
+              "type": 19
+            }
+          },
+          {
+            "label": "approach",
+            "type": {
+              "displayName": [
+                "Option"
+              ],
+              "type": 20
+            }
+          },
+          {
+            "label": "deadline_extension_info",
+            "type": {
+              "displayName": [
+                "Option"
+              ],
+              "type": 22
+            }
+          }
+        ],
+        "docs": [],
+        "label": "create_proposal",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 24
+        },
+        "selector": "0xf9fb13d3"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 0
+            }
+          },
+          {
+            "label": "vote",
+            "type": {
+              "displayName": [
+                "Vote"
+              ],
+              "type": 7
+            }
+          }
+        ],
+        "docs": [],
+        "label": "vote_proposal",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 27
+        },
+        "selector": "0x946595e4"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "execute_proposal",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 27
+        },
+        "selector": "0xde5bbbbc"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "show_address",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 29
+        },
+        "selector": "0xd51bb640"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "get_voting_status",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 30
+        },
+        "selector": "0x9ba1383f"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "get_proposal_info",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 34
+        },
+        "selector": "0xdcb18114"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "get_approach_info",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 39
+        },
+        "selector": "0x56d5a871"
+      },
+      {
+        "args": [
+          {
+            "label": "proposal_id",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 0
+            }
+          }
+        ],
+        "docs": [],
+        "label": "get_deadline_extension_info",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 41
+        },
+        "selector": "0x85d901a2"
+      }
+    ]
+  },
+  "storage": {
+    "root": {
+      "layout": {
+        "struct": {
+          "fields": [
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "next_proposal_id"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0x900f94d8",
+                              "name": "ProposalType",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "ProposeApproach"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "ExtendDeadLine"
+                                }
+                              }
+                            }
+                          },
+                          "name": "proposal_type"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x900f94d8",
+                              "ty": 0
+                            }
+                          },
+                          "name": "proposal_id"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x900f94d8",
+                              "ty": 1
+                            }
+                          },
+                          "name": "proposer"
+                        },
+                        {
+                          "layout": {
+                            "struct": {
+                              "fields": [
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0x900f94d8",
+                                      "ty": 0
+                                    }
+                                  },
+                                  "name": "start_time"
+                                },
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0x900f94d8",
+                                      "ty": 0
+                                    }
+                                  },
+                                  "name": "end_time"
+                                }
+                              ],
+                              "name": "ProposalSpan"
+                            }
+                          },
+                          "name": "proposal_span"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x900f94d8",
+                              "ty": 4
+                            }
+                          },
+                          "name": "title"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0x900f94d8",
+                              "name": "Status",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "Open"
+                                },
+                                "1": {
+                                  "fields": [],
+                                  "name": "Rejected"
+                                },
+                                "2": {
+                                  "fields": [],
+                                  "name": "Passed"
+                                },
+                                "3": {
+                                  "fields": [],
+                                  "name": "Executed"
+                                }
+                              }
+                            }
+                          },
+                          "name": "status"
+                        }
+                      ],
+                      "name": "ProposalInfo"
+                    }
+                  },
+                  "root_key": "0x900f94d8"
+                }
+              },
+              "name": "proposals"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xda93d8c3",
+                              "ty": 0
+                            }
+                          },
+                          "name": "proposal_id"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xda93d8c3",
+                              "ty": 5
+                            }
+                          },
+                          "name": "voters"
+                        },
+                        {
+                          "layout": {
+                            "struct": {
+                              "fields": [
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0xda93d8c3",
+                                      "ty": 0
+                                    }
+                                  },
+                                  "name": "yes"
+                                },
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0xda93d8c3",
+                                      "ty": 0
+                                    }
+                                  },
+                                  "name": "no"
+                                },
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0xda93d8c3",
+                                      "ty": 0
+                                    }
+                                  },
+                                  "name": "abstain"
+                                }
+                              ],
+                              "name": "Votes"
+                            }
+                          },
+                          "name": "votes"
+                        }
+                      ],
+                      "name": "VotingStatus"
+                    }
+                  },
+                  "root_key": "0xda93d8c3"
+                }
+              },
+              "name": "voting_result"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "proposal_duration"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "quorum"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x5e7b0ac0",
+                              "ty": 0
+                            }
+                          },
+                          "name": "project_start_date"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x5e7b0ac0",
+                              "ty": 0
+                            }
+                          },
+                          "name": "project_completion_date"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x5e7b0ac0",
+                              "ty": 8
+                            }
+                          },
+                          "name": "tasks"
+                        }
+                      ],
+                      "name": "AcceptedApproach"
+                    }
+                  },
+                  "root_key": "0x5e7b0ac0"
+                }
+              },
+              "name": "approach_info"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x6e255ab7",
+                              "ty": 10
+                            }
+                          },
+                          "name": "task_id"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x6e255ab7",
+                              "ty": 0
+                            }
+                          },
+                          "name": "deadline"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x6e255ab7",
+                              "ty": 15
+                            }
+                          },
+                          "name": "details"
+                        }
+                      ],
+                      "name": "DeadLineExtensionInfo"
+                    }
+                  },
+                  "root_key": "0x6e255ab7"
+                }
+              },
+              "name": "deadline_extension_info"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 1
+                }
+              },
+              "name": "project_address"
+            }
+          ],
+          "name": "Pproposal"
+        }
+      },
+      "root_key": "0x00000000"
+    }
+  },
+  "types": [
+    {
+      "id": 0,
+      "type": {
+        "def": {
+          "primitive": "u64"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 2,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "types",
+          "AccountId"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "type": {
+        "def": {
+          "array": {
+            "len": 32,
+            "type": 3
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": {
+        "def": {
+          "primitive": "u8"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": {
+        "def": {
+          "primitive": "str"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 6
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "voter",
+                "type": 1,
+                "typeName": "AccountId"
+              },
+              {
+                "name": "vote",
+                "type": 7,
+                "typeName": "Vote"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "VoteInfo"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "Yes"
+              },
+              {
+                "index": 1,
+                "name": "No"
+              },
+              {
+                "index": 2,
+                "name": "Abstain"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "Vote"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 9
+          }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "task_id",
+                "type": 10,
+                "typeName": "u16"
+              },
+              {
+                "name": "start_after",
+                "type": 11,
+                "typeName": "Vec<u16>"
+              },
+              {
+                "name": "start_time",
+                "type": 12,
+                "typeName": "Option<Timestamp>"
+              },
+              {
+                "name": "end_time",
+                "type": 0,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "status",
+                "type": 13,
+                "typeName": "TaskStatus"
+              },
+              {
+                "name": "performance_rating",
+                "type": 14,
+                "typeName": "Option<u8>"
+              },
+              {
+                "name": "details",
+                "type": 15,
+                "typeName": "Vec<String>"
+              },
+              {
+                "name": "children_task",
+                "type": 11,
+                "typeName": "Vec<u16>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "Task"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "type": {
+        "def": {
+          "primitive": "u16"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 10
+          }
+        }
+      }
+    },
+    {
+      "id": 12,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 0
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 0
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "NotYetStarted"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 3,
+                    "typeName": "u8"
+                  }
+                ],
+                "index": 1,
+                "name": "Running"
+              },
+              {
+                "index": 2,
+                "name": "InReview"
+              },
+              {
+                "index": 3,
+                "name": "Completed"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "TaskStatus"
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 3
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 3
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 4
+          }
+        }
+      }
+    },
+    {
+      "id": 16,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 17
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 17
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "type": {
+        "def": {
+          "tuple": []
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 1,
+                "name": "CouldNotReadInput"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "LangError"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "ProposeApproach"
+              },
+              {
+                "index": 1,
+                "name": "ExtendDeadLine"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "ProposalType"
+        ]
+      }
+    },
+    {
+      "id": 20,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 21
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 21
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "project_start_date",
+                "type": 0,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "project_completion_date",
+                "type": 0,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "tasks",
+                "type": 8,
+                "typeName": "Vec<Task>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "AcceptedApproach"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 23
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 23
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "task_id",
+                "type": 10,
+                "typeName": "u16"
+              },
+              {
+                "name": "deadline",
+                "type": 0,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "details",
+                "type": 15,
+                "typeName": "Vec<String>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "DeadLineExtensionInfo"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 25
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 25
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 25,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 0
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 0
+          },
+          {
+            "name": "E",
+            "type": 26
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "MemberNotFound"
+              },
+              {
+                "index": 1,
+                "name": "UnAuthorized"
+              },
+              {
+                "index": 2,
+                "name": "CannotInitialiseProject"
+              },
+              {
+                "index": 3,
+                "name": "CannotTransferFund"
+              },
+              {
+                "index": 4,
+                "name": "AlreadySecretariate"
+              },
+              {
+                "index": 5,
+                "name": "AlreadyMember"
+              },
+              {
+                "index": 6,
+                "name": "ProposalAddressNotFound"
+              },
+              {
+                "index": 7,
+                "name": "ProposalAddressAlreadyExist"
+              },
+              {
+                "index": 8,
+                "name": "ProjectNotFound"
+              },
+              {
+                "index": 9,
+                "name": "InsufficientFundInOrganisation"
+              },
+              {
+                "index": 10,
+                "name": "AlreadyApplied"
+              },
+              {
+                "index": 11,
+                "name": "ApproachAlreadyAccepted"
+              },
+              {
+                "index": 12,
+                "name": "NotAMember"
+              },
+              {
+                "index": 13,
+                "name": "ThisTaskIsNotAssignedToYou"
+              },
+              {
+                "index": 14,
+                "name": "TaskInReview"
+              },
+              {
+                "index": 15,
+                "name": "TaskCompleted"
+              },
+              {
+                "index": 16,
+                "name": "TaskAlreadyAssigned"
+              },
+              {
+                "index": 17,
+                "name": "TaskNotFound"
+              },
+              {
+                "index": 18,
+                "name": "AlreadyReviewed"
+              },
+              {
+                "index": 19,
+                "name": "AlreadyVoted"
+              },
+              {
+                "index": 20,
+                "name": "ProposalClosed"
+              },
+              {
+                "index": 21,
+                "name": "ProposalRejected"
+              },
+              {
+                "index": 22,
+                "name": "ProposalAlreadyExecuted"
+              },
+              {
+                "index": 23,
+                "name": "ProposalNotFound"
+              },
+              {
+                "index": 24,
+                "name": "ProposalRunning"
+              },
+              {
+                "index": 25,
+                "name": "ApproachNotDefined"
+              },
+              {
+                "index": 26,
+                "name": "DeadLineNotDefined"
+              },
+              {
+                "index": 27,
+                "name": "IncorrectProposalType"
+              },
+              {
+                "index": 28,
+                "name": "CannotStartProjectBeforeVoting"
+              },
+              {
+                "index": 29,
+                "name": "ApproachNotRequiredForThisProposal"
+              },
+              {
+                "index": 30,
+                "name": "TaskDeadlineCannotCrossPojectDeadLine"
+              },
+              {
+                "index": 31,
+                "name": "DeadLineInfoNotRequiredForThisProposal"
+              },
+              {
+                "index": 32,
+                "name": "ProjectInfoNotFound"
+              },
+              {
+                "index": 33,
+                "name": "QuorumInfoNotFound"
+              },
+              {
+                "index": 34,
+                "name": "SpanInfoNotFound"
+              },
+              {
+                "index": 35,
+                "name": "FundInfoNotFound"
+              },
+              {
+                "index": 36,
+                "name": "InvalidProjectInfo"
+              },
+              {
+                "index": 37,
+                "name": "ProjectIdNotFound"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "Error"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 28
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 28
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 17
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 17
+          },
+          {
+            "name": "E",
+            "type": 26
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 1
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 1
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 31
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 31
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 32
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 32
+          },
+          {
+            "name": "E",
+            "type": 26
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 32,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "proposal_id",
+                "type": 0,
+                "typeName": "u64"
+              },
+              {
+                "name": "voters",
+                "type": 5,
+                "typeName": "Vec<VoteInfo>"
+              },
+              {
+                "name": "votes",
+                "type": 33,
+                "typeName": "Votes"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "VotingStatus"
+        ]
+      }
+    },
+    {
+      "id": 33,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "yes",
+                "type": 0,
+                "typeName": "u64"
+              },
+              {
+                "name": "no",
+                "type": 0,
+                "typeName": "u64"
+              },
+              {
+                "name": "abstain",
+                "type": 0,
+                "typeName": "u64"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "Votes"
+        ]
+      }
+    },
+    {
+      "id": 34,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 35
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 35
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 35,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 36
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 36
+          },
+          {
+            "name": "E",
+            "type": 26
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 36,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "proposal_type",
+                "type": 19,
+                "typeName": "ProposalType"
+              },
+              {
+                "name": "proposal_id",
+                "type": 0,
+                "typeName": "u64"
+              },
+              {
+                "name": "proposer",
+                "type": 1,
+                "typeName": "AccountId"
+              },
+              {
+                "name": "proposal_span",
+                "type": 37,
+                "typeName": "ProposalSpan"
+              },
+              {
+                "name": "title",
+                "type": 4,
+                "typeName": "String"
+              },
+              {
+                "name": "status",
+                "type": 38,
+                "typeName": "Status"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "ProposalInfo"
+        ]
+      }
+    },
+    {
+      "id": 37,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "start_time",
+                "type": 0,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "end_time",
+                "type": 0,
+                "typeName": "Timestamp"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "ProposalSpan"
+        ]
+      }
+    },
+    {
+      "id": 38,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "Open"
+              },
+              {
+                "index": 1,
+                "name": "Rejected"
+              },
+              {
+                "index": 2,
+                "name": "Passed"
+              },
+              {
+                "index": 3,
+                "name": "Executed"
+              }
+            ]
+          }
+        },
+        "path": [
+          "pproposal",
+          "pproposal",
+          "Status"
+        ]
+      }
+    },
+    {
+      "id": 39,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 40
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 40
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 40,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 21
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 21
+          },
+          {
+            "name": "E",
+            "type": 26
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 41,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 42
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 18
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 42
+          },
+          {
+            "name": "E",
+            "type": 18
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 42,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 23
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 23
+          },
+          {
+            "name": "E",
+            "type": 26
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    }
+  ],
+  "version": "4"
+}

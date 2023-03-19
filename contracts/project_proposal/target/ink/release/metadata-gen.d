@@ -1,0 +1,1 @@
+/home/adarsh/hackathon/fresh/project_proposal/target/ink/release/metadata-gen: /home/adarsh/hackathon/fresh/project/lib.rs /home/adarsh/hackathon/fresh/project_proposal/lib.rs /tmp/cargo-contract_Tqv7Pj/.ink/metadata_gen/main.rs

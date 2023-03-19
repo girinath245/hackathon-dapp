@@ -1,0 +1,39 @@
+[package]
+name = "org"
+version = "0.1.0"
+authors = ["adarsh"]
+edition = "2021"
+publish = false
+
+[dependencies]
+ink = { version = "4.0", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.3", default-features = false, features = ["derive"], optional = true }
+project = { path = "../project", default-features = false, features = ["ink-as-dependency"] }
+pproposal = { path = "../project_proposal", default-features = false, features = ["ink-as-dependency"] }
+
+
+[dev-dependencies]
+
+[lib]
+name = "org"
+path = "lib.rs"
+crate-type = ["cdylib","rlib"]
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+    "project/std",
+]
+ink-as-dependency = []
+e2e-tests = []
+
+# [workspace]
+# members = [
+#     "project",
+#     "proposal"
+# ]
