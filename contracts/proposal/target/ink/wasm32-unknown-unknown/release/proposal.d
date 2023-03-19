@@ -1,1 +1,0 @@
-/home/adarsh/hackathon/fresh/proposal/target/ink/wasm32-unknown-unknown/release/proposal.wasm: /home/adarsh/hackathon/fresh/org/lib.rs /home/adarsh/hackathon/fresh/project/lib.rs /home/adarsh/hackathon/fresh/project_proposal/lib.rs /home/adarsh/hackathon/fresh/proposal/lib.rs
