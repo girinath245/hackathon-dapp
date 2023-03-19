@@ -1,3 +1,0 @@
-cargo:rerun-if-changed=build/main.rs
-cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/adarsh/hackathon/fresh/project_proposal/target/ink/release/build/typenum-de077ef2fa6e9bee/out/consts.rs
-cargo:rustc-env=TYPENUM_BUILD_OP=/home/adarsh/hackathon/fresh/project_proposal/target/ink/release/build/typenum-de077ef2fa6e9bee/out/op.rs
