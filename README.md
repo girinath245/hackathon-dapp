@@ -1,4 +1,4 @@
-# Management DApp
+# Management DAO Tool
 
 * Management DAO tool is based on shared responsibility and reward, which offloads the manager's and secretariat's work.
 * This is accomplished through a weighted voting and recommendation system available to all members of the organization.
