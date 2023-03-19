@@ -1,9 +1,0 @@
-# Generated files
-/org/target/
-/org/Cargo.lock/
-/project/target/
-/project/Cargo.lock/
-/proposal/target/
-/proposal/Cargo.lock/
-/pproposal/target/
-/pproposal/Cargo.lock/

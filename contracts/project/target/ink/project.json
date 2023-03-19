@@ -1,0 +1,2066 @@
+{
+  "source": {
+    "hash": "0x4cbede809003a1517b7aceca82f25878e89ef83833525195ee7471fbdbc82ebf",
+    "language": "ink! 4.0.1",
+    "compiler": "rustc 1.66.1",
+    "build_info": {
+      "build_mode": "Debug",
+      "cargo_contract_version": "2.0.1",
+      "rust_toolchain": "stable-x86_64-unknown-linux-gnu",
+      "wasm_opt_settings": {
+        "keep_debug_symbols": false,
+        "optimization_passes": "Z"
+      }
+    }
+  },
+  "contract": {
+    "name": "project",
+    "version": "0.1.0",
+    "authors": [
+      "adarsh"
+    ]
+  },
+  "spec": {
+    "constructors": [
+      {
+        "args": [
+          {
+            "label": "id",
+            "type": {
+              "displayName": [
+                "u32"
+              ],
+              "type": 0
+            }
+          },
+          {
+            "label": "business_idea",
+            "type": {
+              "displayName": [
+                "BusinessIdea"
+              ],
+              "type": 11
+            }
+          },
+          {
+            "label": "manager",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          },
+          {
+            "label": "fund_allocated",
+            "type": {
+              "displayName": [
+                "u128"
+              ],
+              "type": 2
+            }
+          },
+          {
+            "label": "strength",
+            "type": {
+              "displayName": [
+                "u64"
+              ],
+              "type": 7
+            }
+          },
+          {
+            "label": "proposal_contract",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          }
+        ],
+        "docs": [],
+        "label": "new",
+        "payable": true,
+        "returnType": {
+          "displayName": [
+            "ink_primitives",
+            "ConstructorResult"
+          ],
+          "type": 12
+        },
+        "selector": "0x9bae9d5e"
+      }
+    ],
+    "docs": [],
+    "events": [],
+    "lang_error": {
+      "displayName": [
+        "ink",
+        "LangError"
+      ],
+      "type": 14
+    },
+    "messages": [
+      {
+        "args": [
+          {
+            "label": "proposal_contract_address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          }
+        ],
+        "docs": [],
+        "label": "update_proposal_address",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 12
+        },
+        "selector": "0x66a2007b"
+      },
+      {
+        "args": [
+          {
+            "label": "amount",
+            "type": {
+              "displayName": [
+                "u128"
+              ],
+              "type": 2
+            }
+          }
+        ],
+        "docs": [],
+        "label": "update_fund_allocated",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 12
+        },
+        "selector": "0x7b6cc19c"
+      },
+      {
+        "args": [
+          {
+            "label": "address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          },
+          {
+            "label": "name",
+            "type": {
+              "displayName": [
+                "String"
+              ],
+              "type": 1
+            }
+          },
+          {
+            "label": "resume_url",
+            "type": {
+              "displayName": [
+                "String"
+              ],
+              "type": 1
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_update_interested_list",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0xefbbcaf7"
+      },
+      {
+        "args": [
+          {
+            "label": "interested_member_address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_add_member",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0xd2dfcbf8"
+      },
+      {
+        "args": [
+          {
+            "label": "approach",
+            "type": {
+              "displayName": [
+                "AcceptedApproach"
+              ],
+              "type": 18
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_accept_proposed_approach",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0x5daa5cd8"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "member_address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_assign_task_to_member",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0xc7e5894c"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "progress",
+            "type": {
+              "displayName": [
+                "u8"
+              ],
+              "type": 6
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_update_task_progress",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0xb6fde285"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "rating",
+            "type": {
+              "displayName": [
+                "u8"
+              ],
+              "type": 6
+            }
+          }
+        ],
+        "docs": [],
+        "label": "review_task_and_rate",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0xfa08586c"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "member",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          },
+          {
+            "label": "check_task_only",
+            "type": {
+              "displayName": [
+                "bool"
+              ],
+              "type": 24
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_check_voters_for_deadline_extension",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 25
+        },
+        "selector": "0xe32c42a8"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "completion_time",
+            "type": {
+              "displayName": [
+                "Timestamp"
+              ],
+              "type": 7
+            }
+          }
+        ],
+        "docs": [],
+        "label": "is_possible_deadline",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 25
+        },
+        "selector": "0xaac34cde"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          },
+          {
+            "label": "completion_time",
+            "type": {
+              "displayName": [
+                "Timestamp"
+              ],
+              "type": 7
+            }
+          }
+        ],
+        "docs": [],
+        "label": "try_extend_task_deadline",
+        "mutates": true,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 15
+        },
+        "selector": "0x5b2b22e0"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "show_address",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 27
+        },
+        "selector": "0xd51bb640"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "show_interested_members_list",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 28
+        },
+        "selector": "0xf58f5661"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "show_members_list",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 28
+        },
+        "selector": "0x87c9ec7c"
+      },
+      {
+        "args": [
+          {
+            "label": "address",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 4
+            }
+          }
+        ],
+        "docs": [],
+        "label": "check_member",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 29
+        },
+        "selector": "0x1b0c78cf"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "total_members",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 30
+        },
+        "selector": "0xc23f95c5"
+      },
+      {
+        "args": [
+          {
+            "label": "task_id",
+            "type": {
+              "displayName": [
+                "u16"
+              ],
+              "type": 10
+            }
+          }
+        ],
+        "docs": [],
+        "label": "get_task_members",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 28
+        },
+        "selector": "0x530ed3f0"
+      },
+      {
+        "args": [],
+        "docs": [],
+        "label": "get_review_task",
+        "mutates": false,
+        "payable": false,
+        "returnType": {
+          "displayName": [
+            "ink",
+            "MessageResult"
+          ],
+          "type": 31
+        },
+        "selector": "0x05a67d62"
+      }
+    ]
+  },
+  "storage": {
+    "root": {
+      "layout": {
+        "struct": {
+          "fields": [
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 0
+                }
+              },
+              "name": "id"
+            },
+            {
+              "layout": {
+                "struct": {
+                  "fields": [
+                    {
+                      "layout": {
+                        "leaf": {
+                          "key": "0x00000000",
+                          "ty": 1
+                        }
+                      },
+                      "name": "title"
+                    },
+                    {
+                      "layout": {
+                        "leaf": {
+                          "key": "0x00000000",
+                          "ty": 2
+                        }
+                      },
+                      "name": "info_count"
+                    },
+                    {
+                      "layout": {
+                        "leaf": {
+                          "key": "0x00000000",
+                          "ty": 3
+                        }
+                      },
+                      "name": "info_list"
+                    }
+                  ],
+                  "name": "BusinessIdea"
+                }
+              },
+              "name": "project_info"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 4
+                }
+              },
+              "name": "manager"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 7
+                }
+              },
+              "name": "curr_member_count"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 8
+                }
+              },
+              "name": "member_list"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xa52cc268",
+                              "ty": 1
+                            }
+                          },
+                          "name": "name"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xa52cc268",
+                              "ty": 4
+                            }
+                          },
+                          "name": "address"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xa52cc268",
+                              "ty": 1
+                            }
+                          },
+                          "name": "resume_url"
+                        }
+                      ],
+                      "name": "MemberInfo"
+                    }
+                  },
+                  "root_key": "0xa52cc268"
+                }
+              },
+              "name": "members_info"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "leaf": {
+                      "key": "0x7eb1a5f1",
+                      "ty": 9
+                    }
+                  },
+                  "root_key": "0x7eb1a5f1"
+                }
+              },
+              "name": "members_assigned_task_list"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "leaf": {
+                      "key": "0x809b29ec",
+                      "ty": 8
+                    }
+                  },
+                  "root_key": "0x809b29ec"
+                }
+              },
+              "name": "members_in_task"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 2
+                }
+              },
+              "name": "total_fund_allocated"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 7
+                }
+              },
+              "name": "strength"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 4
+                }
+              },
+              "name": "organisation_contract"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 4
+                }
+              },
+              "name": "organisation_proposal_contract"
+            },
+            {
+              "layout": {
+                "enum": {
+                  "dispatchKey": "0x00000000",
+                  "name": "CommunityFormationStatus",
+                  "variants": {
+                    "0": {
+                      "fields": [],
+                      "name": "Running"
+                    },
+                    "1": {
+                      "fields": [],
+                      "name": "Closed"
+                    }
+                  }
+                }
+              },
+              "name": "community_formation_status"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 8
+                }
+              },
+              "name": "interested_members"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x3b0a716c",
+                              "ty": 1
+                            }
+                          },
+                          "name": "name"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x3b0a716c",
+                              "ty": 4
+                            }
+                          },
+                          "name": "address"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x3b0a716c",
+                              "ty": 1
+                            }
+                          },
+                          "name": "resume_url"
+                        }
+                      ],
+                      "name": "MemberInfo"
+                    }
+                  },
+                  "root_key": "0x3b0a716c"
+                }
+              },
+              "name": "interested_members_info"
+            },
+            {
+              "layout": {
+                "enum": {
+                  "dispatchKey": "0x00000000",
+                  "name": "Option",
+                  "variants": {
+                    "0": {
+                      "fields": [],
+                      "name": "None"
+                    },
+                    "1": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "struct": {
+                              "fields": [
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0x00000000",
+                                      "ty": 7
+                                    }
+                                  },
+                                  "name": "project_start_date"
+                                },
+                                {
+                                  "layout": {
+                                    "leaf": {
+                                      "key": "0x00000000",
+                                      "ty": 7
+                                    }
+                                  },
+                                  "name": "project_completion_date"
+                                }
+                              ],
+                              "name": "DeadLine"
+                            }
+                          },
+                          "name": "0"
+                        }
+                      ],
+                      "name": "Some"
+                    }
+                  }
+                }
+              },
+              "name": "deadline"
+            },
+            {
+              "layout": {
+                "root": {
+                  "layout": {
+                    "struct": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf190db1f",
+                              "ty": 10
+                            }
+                          },
+                          "name": "task_id"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf190db1f",
+                              "ty": 9
+                            }
+                          },
+                          "name": "start_after"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xf190db1f",
+                              "name": "Option",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "None"
+                                },
+                                "1": {
+                                  "fields": [
+                                    {
+                                      "layout": {
+                                        "leaf": {
+                                          "key": "0xf190db1f",
+                                          "ty": 7
+                                        }
+                                      },
+                                      "name": "0"
+                                    }
+                                  ],
+                                  "name": "Some"
+                                }
+                              }
+                            }
+                          },
+                          "name": "start_time"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf190db1f",
+                              "ty": 7
+                            }
+                          },
+                          "name": "end_time"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xf190db1f",
+                              "name": "TaskStatus",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "NotYetStarted"
+                                },
+                                "1": {
+                                  "fields": [
+                                    {
+                                      "layout": {
+                                        "leaf": {
+                                          "key": "0xf190db1f",
+                                          "ty": 6
+                                        }
+                                      },
+                                      "name": "0"
+                                    }
+                                  ],
+                                  "name": "Running"
+                                },
+                                "2": {
+                                  "fields": [],
+                                  "name": "InReview"
+                                },
+                                "3": {
+                                  "fields": [],
+                                  "name": "Completed"
+                                }
+                              }
+                            }
+                          },
+                          "name": "status"
+                        },
+                        {
+                          "layout": {
+                            "enum": {
+                              "dispatchKey": "0xf190db1f",
+                              "name": "Option",
+                              "variants": {
+                                "0": {
+                                  "fields": [],
+                                  "name": "None"
+                                },
+                                "1": {
+                                  "fields": [
+                                    {
+                                      "layout": {
+                                        "leaf": {
+                                          "key": "0xf190db1f",
+                                          "ty": 6
+                                        }
+                                      },
+                                      "name": "0"
+                                    }
+                                  ],
+                                  "name": "Some"
+                                }
+                              }
+                            }
+                          },
+                          "name": "performance_rating"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf190db1f",
+                              "ty": 3
+                            }
+                          },
+                          "name": "details"
+                        },
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0xf190db1f",
+                              "ty": 9
+                            }
+                          },
+                          "name": "children_task"
+                        }
+                      ],
+                      "name": "Task"
+                    }
+                  },
+                  "root_key": "0xf190db1f"
+                }
+              },
+              "name": "task_by_id"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 9
+                }
+              },
+              "name": "root_tasks"
+            },
+            {
+              "layout": {
+                "leaf": {
+                  "key": "0x00000000",
+                  "ty": 9
+                }
+              },
+              "name": "review_tasks"
+            },
+            {
+              "layout": {
+                "enum": {
+                  "dispatchKey": "0x00000000",
+                  "name": "Option",
+                  "variants": {
+                    "0": {
+                      "fields": [],
+                      "name": "None"
+                    },
+                    "1": {
+                      "fields": [
+                        {
+                          "layout": {
+                            "leaf": {
+                              "key": "0x00000000",
+                              "ty": 4
+                            }
+                          },
+                          "name": "0"
+                        }
+                      ],
+                      "name": "Some"
+                    }
+                  }
+                }
+              },
+              "name": "project_proposal_address"
+            }
+          ],
+          "name": "Project"
+        }
+      },
+      "root_key": "0x00000000"
+    }
+  },
+  "types": [
+    {
+      "id": 0,
+      "type": {
+        "def": {
+          "primitive": "u32"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "type": {
+        "def": {
+          "primitive": "str"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": {
+        "def": {
+          "primitive": "u128"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 5,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "types",
+          "AccountId"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "type": {
+        "def": {
+          "array": {
+            "len": 32,
+            "type": 6
+          }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": {
+        "def": {
+          "primitive": "u8"
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": {
+        "def": {
+          "primitive": "u64"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 4
+          }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 10
+          }
+        }
+      }
+    },
+    {
+      "id": 10,
+      "type": {
+        "def": {
+          "primitive": "u16"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "title",
+                "type": 1,
+                "typeName": "String"
+              },
+              {
+                "name": "info_count",
+                "type": 2,
+                "typeName": "u128"
+              },
+              {
+                "name": "info_list",
+                "type": 3,
+                "typeName": "Vec<String>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "BusinessIdea"
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 13
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 13
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "type": {
+        "def": {
+          "tuple": []
+        }
+      }
+    },
+    {
+      "id": 14,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 1,
+                "name": "CouldNotReadInput"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "LangError"
+        ]
+      }
+    },
+    {
+      "id": 15,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 16
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 16
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 16,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 13
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 17
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 13
+          },
+          {
+            "name": "E",
+            "type": 17
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 17,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "MemberNotFound"
+              },
+              {
+                "index": 1,
+                "name": "UnAuthorized"
+              },
+              {
+                "index": 2,
+                "name": "CannotInitialiseProject"
+              },
+              {
+                "index": 3,
+                "name": "CannotTransferFund"
+              },
+              {
+                "index": 4,
+                "name": "AlreadySecretariate"
+              },
+              {
+                "index": 5,
+                "name": "AlreadyMember"
+              },
+              {
+                "index": 6,
+                "name": "ProposalAddressNotFound"
+              },
+              {
+                "index": 7,
+                "name": "ProposalAddressAlreadyExist"
+              },
+              {
+                "index": 8,
+                "name": "ProjectNotFound"
+              },
+              {
+                "index": 9,
+                "name": "InsufficientFundInOrganisation"
+              },
+              {
+                "index": 10,
+                "name": "AlreadyApplied"
+              },
+              {
+                "index": 11,
+                "name": "ApproachAlreadyAccepted"
+              },
+              {
+                "index": 12,
+                "name": "NotAMember"
+              },
+              {
+                "index": 13,
+                "name": "ThisTaskIsNotAssignedToYou"
+              },
+              {
+                "index": 14,
+                "name": "TaskInReview"
+              },
+              {
+                "index": 15,
+                "name": "TaskCompleted"
+              },
+              {
+                "index": 16,
+                "name": "TaskAlreadyAssigned"
+              },
+              {
+                "index": 17,
+                "name": "TaskNotFound"
+              },
+              {
+                "index": 18,
+                "name": "AlreadyReviewed"
+              },
+              {
+                "index": 19,
+                "name": "AlreadyVoted"
+              },
+              {
+                "index": 20,
+                "name": "ProposalClosed"
+              },
+              {
+                "index": 21,
+                "name": "ProposalRejected"
+              },
+              {
+                "index": 22,
+                "name": "ProposalAlreadyExecuted"
+              },
+              {
+                "index": 23,
+                "name": "ProposalNotFound"
+              },
+              {
+                "index": 24,
+                "name": "ProposalRunning"
+              },
+              {
+                "index": 25,
+                "name": "ApproachNotDefined"
+              },
+              {
+                "index": 26,
+                "name": "DeadLineNotDefined"
+              },
+              {
+                "index": 27,
+                "name": "IncorrectProposalType"
+              },
+              {
+                "index": 28,
+                "name": "CannotStartProjectBeforeVoting"
+              },
+              {
+                "index": 29,
+                "name": "ApproachNotRequiredForThisProposal"
+              },
+              {
+                "index": 30,
+                "name": "TaskDeadlineCannotCrossPojectDeadLine"
+              },
+              {
+                "index": 31,
+                "name": "DeadLineInfoNotRequiredForThisProposal"
+              },
+              {
+                "index": 32,
+                "name": "ProjectInfoNotFound"
+              },
+              {
+                "index": 33,
+                "name": "QuorumInfoNotFound"
+              },
+              {
+                "index": 34,
+                "name": "SpanInfoNotFound"
+              },
+              {
+                "index": 35,
+                "name": "FundInfoNotFound"
+              },
+              {
+                "index": 36,
+                "name": "InvalidProjectInfo"
+              },
+              {
+                "index": 37,
+                "name": "ProjectIdNotFound"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "Error"
+        ]
+      }
+    },
+    {
+      "id": 18,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "project_start_date",
+                "type": 7,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "project_completion_date",
+                "type": 7,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "tasks",
+                "type": 19,
+                "typeName": "Vec<Task>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "AcceptedApproach"
+        ]
+      }
+    },
+    {
+      "id": 19,
+      "type": {
+        "def": {
+          "sequence": {
+            "type": 20
+          }
+        }
+      }
+    },
+    {
+      "id": 20,
+      "type": {
+        "def": {
+          "composite": {
+            "fields": [
+              {
+                "name": "task_id",
+                "type": 10,
+                "typeName": "u16"
+              },
+              {
+                "name": "start_after",
+                "type": 9,
+                "typeName": "Vec<u16>"
+              },
+              {
+                "name": "start_time",
+                "type": 21,
+                "typeName": "Option<Timestamp>"
+              },
+              {
+                "name": "end_time",
+                "type": 7,
+                "typeName": "Timestamp"
+              },
+              {
+                "name": "status",
+                "type": 22,
+                "typeName": "TaskStatus"
+              },
+              {
+                "name": "performance_rating",
+                "type": 23,
+                "typeName": "Option<u8>"
+              },
+              {
+                "name": "details",
+                "type": 3,
+                "typeName": "Vec<String>"
+              },
+              {
+                "name": "children_task",
+                "type": 9,
+                "typeName": "Vec<u16>"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "Task"
+        ]
+      }
+    },
+    {
+      "id": 21,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 7
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 22,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "NotYetStarted"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 6,
+                    "typeName": "u8"
+                  }
+                ],
+                "index": 1,
+                "name": "Running"
+              },
+              {
+                "index": 2,
+                "name": "InReview"
+              },
+              {
+                "index": 3,
+                "name": "Completed"
+              }
+            ]
+          }
+        },
+        "path": [
+          "project",
+          "project",
+          "TaskStatus"
+        ]
+      }
+    },
+    {
+      "id": 23,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "index": 0,
+                "name": "None"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 6
+                  }
+                ],
+                "index": 1,
+                "name": "Some"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 6
+          }
+        ],
+        "path": [
+          "Option"
+        ]
+      }
+    },
+    {
+      "id": 24,
+      "type": {
+        "def": {
+          "primitive": "bool"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 26
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 26
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 26,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 24
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 17
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 24
+          },
+          {
+            "name": "E",
+            "type": 17
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 27,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 4
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 4
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 28,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 8
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 8
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 29,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 24
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 24
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 7
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 7
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    },
+    {
+      "id": 31,
+      "type": {
+        "def": {
+          "variant": {
+            "variants": [
+              {
+                "fields": [
+                  {
+                    "type": 9
+                  }
+                ],
+                "index": 0,
+                "name": "Ok"
+              },
+              {
+                "fields": [
+                  {
+                    "type": 14
+                  }
+                ],
+                "index": 1,
+                "name": "Err"
+              }
+            ]
+          }
+        },
+        "params": [
+          {
+            "name": "T",
+            "type": 9
+          },
+          {
+            "name": "E",
+            "type": 14
+          }
+        ],
+        "path": [
+          "Result"
+        ]
+      }
+    }
+  ],
+  "version": "4"
+}

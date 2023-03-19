@@ -1,0 +1,11 @@
+/home/adarsh/hackathon/fresh/proposal/target/ink/release/deps/ink_metadata-61d8211d76c2bfb2.rmeta: /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/lib.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/mod.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/validate.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/specs.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/utils.rs
+
+/home/adarsh/hackathon/fresh/proposal/target/ink/release/deps/libink_metadata-61d8211d76c2bfb2.rlib: /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/lib.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/mod.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/validate.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/specs.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/utils.rs
+
+/home/adarsh/hackathon/fresh/proposal/target/ink/release/deps/ink_metadata-61d8211d76c2bfb2.d: /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/lib.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/mod.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/validate.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/specs.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/utils.rs
+
+/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/lib.rs:
+/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/mod.rs:
+/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/layout/validate.rs:
+/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/specs.rs:
+/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/ink_metadata-4.0.1/src/utils.rs:
