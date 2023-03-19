@@ -1,8 +1,0 @@
-/home/adarsh/hackathon/fresh/proposal/target/ink/release/deps/unicode_ident-8ad20d72cfe9bc40.rmeta: /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/lib.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/tables.rs
-
-/home/adarsh/hackathon/fresh/proposal/target/ink/release/deps/libunicode_ident-8ad20d72cfe9bc40.rlib: /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/lib.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/tables.rs
-
-/home/adarsh/hackathon/fresh/proposal/target/ink/release/deps/unicode_ident-8ad20d72cfe9bc40.d: /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/lib.rs /home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/tables.rs
-
-/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/lib.rs:
-/home/adarsh/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-ident-1.0.6/src/tables.rs:
