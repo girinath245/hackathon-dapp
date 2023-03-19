@@ -1,0 +1,40 @@
+.org-header {
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #060b26;
+    position: sticky;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+}
+
+.header-logo-name {
+    display: flex;
+    width: 180px;
+    align-items: center;
+    justify-content: center;
+}
+
+.org-header img {
+    display: block;
+    /* margin-left: px; */
+    width: 40px;
+    height: 40px;
+}
+
+.header-name {
+    /* display: block; */
+    color: #f5f5f5;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-guest {
+    /* /* display: block; */
+    width: 280px; 
+    /* float: right; */
+    color: #f5f5f5;
+}

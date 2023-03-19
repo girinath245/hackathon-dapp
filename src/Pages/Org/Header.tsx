@@ -1,7 +1,11 @@
-import React from 'react'
-import logo from './smart-contracts.png';
+import { useState } from 'react';
+import logo from '../smart-contracts.png';
 
 import './Header.css'
+
+interface addressProps {
+  addr : string ;
+};
 
 function Header() {
   return (
@@ -13,11 +17,11 @@ function Header() {
                 </div>
                 <div className='header-guest'>
                     <span style={{fontWeight: 700}}>Hello, </span>
-                    <span className='header-guest-name'> Guest</span>
+                    <span className='header-guest-name'> Guest </span>
                 </div>
             </div>
     </>
   )
 }
 
-export default Header
+export default Header;

@@ -1,7 +1,7 @@
 export const SideBarData = [
     {
         title: 'Projects',
-        path: '/org/projects',
+        path: '/org/projectlist',
         icon: ""
     },
     {

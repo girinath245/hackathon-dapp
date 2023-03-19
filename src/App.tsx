@@ -4,11 +4,15 @@ import '@polkadot/api-augment';
 
 import Org from './Pages/Org';
 import Login from './Pages/Login';
-import AddMember from './Pages/AddMember';
-import GetMember from './Pages/GetMember';
-import Projects from './Pages/Projects';
-import Secretory from './Pages/Secretory';
-import Proposal from './Pages/Proposal';
+import Project from './Pages/Project';
+
+import ProjectList from './Pages/Org/ProjectList';
+import Secretory from './Pages/Org/Secretory';
+import Proposal from './Pages/Org/Proposal';
+
+import ProjectInfo from './Pages/Project/ProjectInfo';
+import ProjectTasks from './Pages/Project/ProjectTasks';
+import ProjectMembers from './Pages/Project/ProjectMembers';
 
 function App() {
     return (
@@ -16,10 +20,17 @@ function App() {
             <Router>
                 <Routes>
                     <Route path='/' element={<Login />} ></Route>
+
                     <Route path='/org' element={<Org />}></Route>
-                    <Route path='/org/projects' element={<Projects />}></Route>
+                    <Route path='/org/projectlist' element={<ProjectList />}></Route>
                     <Route path='/org/secretory' element={<Secretory />}></Route>
                     <Route path='/org/proposal' element={<Proposal />}></Route>
+
+                    <Route path='/project' element={<Project />}></Route>
+                    <Route path='/project/info' element={<ProjectInfo />}></Route>
+                    <Route path='/project/members' element={<ProjectMembers />}></Route>
+                    <Route path='/project/tasks' element={<ProjectTasks />}></Route>
+
             </Routes>
         </Router>
         </div >

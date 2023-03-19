@@ -51,8 +51,10 @@ const Login = () => {
         const account = accounts.find(account => account.address === selectedAddress);
 
         setSelectedAccount(account);
-
-        navigate("/org");
+        
+        if (account) {
+            navigate("/org" , {state : {accountaddress : account?.address}});
+        }
     };
 
     return (

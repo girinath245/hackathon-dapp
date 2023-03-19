@@ -1,13 +1,9 @@
-import './Org.css'
-import Header from './Org/Header';
-import SidePanel from './Org/SidePanel';
+import SidePanel from './Project/SidePanel';
 
-import { useLocation } from 'react-router-dom';
-  
-const Org = () => {
-    const location = useLocation();
-    console.log("User is ",location.state.accountaddress);
-    
+import './Project.css'
+import Header from './Project/Header';
+
+const Project = () => {
     return (
         // <div className="main-div">
         //     <div className="side-panel">
@@ -40,4 +36,4 @@ const Org = () => {
     );
 };
 
-export default Org;
+export default Project;
