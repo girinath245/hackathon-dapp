@@ -4,24 +4,25 @@ import { InjectedAccountWithMeta } from '@polkadot/extension-inject/types';
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp';
 
 import { ChangeEvent, useEffect, useState } from 'react';
+import { ApiPromise, WsProvider } from '@polkadot/api';
 
 import '@polkadot/api-augment';
-
-import { ApiPromise } from '@polkadot/api';
-import { WsProvider } from '@polkadot/rpc-provider';
 
 import '../App.css';
 
 const Login = () => {
     const [accounts, setAccounts] = useState<InjectedAccountWithMeta[]>([]);
     const [selectedAcccount, setSelectedAccount] = useState<InjectedAccountWithMeta>();
+
     const navigate = useNavigate();
 
     const setup = async () => {
         const wsProvider = new WsProvider('wss://shiden.api.onfinality.io/public-ws');
         const api = await ApiPromise.create({ provider: wsProvider });
 
-        console.log(api.genesisHash.toHex());
+        await api.isReady;
+
+        console.log(api?.genesisHash.toHex());
         //console.log((await api.rpc.system.properties()).toHuman());
     };
 
@@ -47,7 +48,7 @@ const Login = () => {
     const handleAccountSelection = (e: ChangeEvent<HTMLSelectElement>) => {
         const selectedAddress = e.target.value;
 
-        console.log(selectedAddress)
+        //console.log(selectedAddress)
         const account = accounts.find(account => account.address === selectedAddress);
 
         setSelectedAccount(account);

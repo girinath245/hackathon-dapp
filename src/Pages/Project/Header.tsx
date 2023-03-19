@@ -1,12 +1,14 @@
+import { useContext, createContext } from 'react';
 import logo from '../smart-contracts.png';
 
 import './Header.css'
 
-interface addressProps {
-  addr : string ;
-};
+export const userContextProj = createContext("Guest");
 
-function Header() {
+const Header = () => {
+  
+  const username= useContext(userContextProj);
+
   return (
     <>
         <div className='org-header'>
@@ -16,11 +18,11 @@ function Header() {
                 </div>
                 <div className='header-guest'>
                     <span style={{fontWeight: 700}}>Hello, </span>
-                    <span className='header-guest-name'> Guest</span>
+                    <span className='header-guest-name'> {username} </span>
                 </div>
             </div>
     </>
   )
-}
+};
 
 export default Header;
